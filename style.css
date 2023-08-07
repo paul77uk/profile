@@ -1,5 +1,4 @@
 body {
-  text-align: center;
   background-color: antiquewhite;
   font-family: 'open  sans';
   font-size: 20px;
@@ -8,9 +7,13 @@ body {
 }
 
 .card {
-  width: 75%;
+  width: 60%;
   margin: 30 auto;
   padding: 20px;
+  @media (min-width: 1200px) {
+    /* For a screen < 540px, this CSS will be read */
+    width: 40%;
+  }
   border-radius: 5px;
   background-color: white;
   box-shadow:0px 0px 15px rgb(192, 192, 192);
@@ -53,7 +56,19 @@ button:hover {
 }
 
 .fa-github {
- color: black;
+ color: rgb(91, 91, 91);
+}
+
+.fa-github:hover {
+color: black;
+}
+
+.fa-linkedin {
+  color: #0852d4;
+}
+
+.fa-linkedin:hover {
+  color: #0421b2;
 }
 
 ul {
@@ -64,4 +79,13 @@ li {
   list-style-type: none;
   display: inline-block;
   margin-right: 10px;
+}
+
+.container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
 }
